@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+.next/
+/.next/
+/out/
+
+# production
+/build
+
+# hitsory
+.history
+
+.yalc
