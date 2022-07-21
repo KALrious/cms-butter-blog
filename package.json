@@ -6,8 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -s public,.storybook -p 6006",
+    "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
