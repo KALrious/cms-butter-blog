@@ -37,6 +37,7 @@ export async function getLandingPage(slug) {
 export async function getLandingPages() {
   let paginatedLandingPages = [];
   let currentPage = 1;
+  console.log('toto');
   while (!!currentPage) {
     const landingPagesData = await getLandingPagesData(currentPage);
     paginatedLandingPages.push(...landingPagesData.pages);
@@ -52,9 +53,9 @@ async function getLandingPagesData(page: number, pageSize = defaultPageSize) {
       page,
       page_size: pageSize,
     } as Params;
-
+    console.log('landing pages params', params);
     const response = await butter.page.list('landing-page', params);
-
+    console.log('landing pages response', response);
     return {
       pages: response?.data?.data as { slug: string }[],
       prevPage: response?.data?.meta.previous_page as number | null,
@@ -71,8 +72,8 @@ export async function getPostsData({
   tag,
   category,
 }: {
-  page: number;
-  pageSize: number;
+  page?: number;
+  pageSize?: number;
   tag?: string;
   category?: string;
 }) {

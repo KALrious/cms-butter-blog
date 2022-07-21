@@ -134,7 +134,7 @@ export async function getStaticPaths() {
 
     if (butterToken) {
         try {
-            const posts = (await getPostsData()).posts;
+            const posts = (await getPostsData({})).posts;
 
             return {
                 paths: posts.map((post) => `/blog/${post.slug}`),

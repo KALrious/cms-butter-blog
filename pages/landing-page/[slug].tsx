@@ -35,7 +35,7 @@ export default function LandingPage({ page, blogPosts }) {
         />
       </Head>
 
-      {page.fields.body.map(({ type, fields: sectionData }, index) => (
+      {page?.fields.body.map(({ type, fields: sectionData }, index) => (
         <LandingPageSection key={index} type={type} sectionData={sectionData} />
       ))}
       <Blog posts={blogPosts} />
@@ -66,7 +66,6 @@ export async function getStaticPaths() {
   if (butterToken) {
     try {
       const landingPages = await getLandingPages();
-
       return {
         paths: landingPages.map(({ slug }) => `/landing-page/${slug}`),
         fallback: true,
