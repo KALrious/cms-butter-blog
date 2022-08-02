@@ -10,6 +10,11 @@ const Template: ComponentStory<typeof HeaderSection> = (args) => (
   <HeaderSection {...args} />
 );
 
-export const Defaults = Template.bind({
-  price: 1990,
-});
+export const Defaults = Template.bind({});
+
+Defaults.args = {
+  mainMenuLinks: [
+    { label: 'Home', url: 'home' },
+    { label: 'Blog', url: 'blog' },
+  ],
+};
