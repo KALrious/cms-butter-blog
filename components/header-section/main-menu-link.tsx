@@ -12,10 +12,10 @@ export default function MainMenuLink({
   callbackOnClick,
 }: Props) {
   return (
-    <li className="nav-item" onClick={callbackOnClick}>
-      <a className="" href={`/${url}`}>
-        {label}
-      </a>
+    <li
+      onClick={callbackOnClick}
+      className="prose-a:text-gray-600 hover:prose-a:text-black active:prose-a:text-black">
+      <a href={`/${url}`}>{label}</a>
     </li>
   );
 }
