@@ -114,12 +114,18 @@ export async function getPost(slug) {
   }
 }
 
-//TODO: add type here
+type MainMenu = {
+  menu_items: {
+    url: string;
+    label: string;
+  };
+};
+
 export async function getMainMenu() {
   try {
     const response = await butter.content.retrieve(['navigation_menu']);
 
-    const mainMenu = response?.data?.data?.navigation_menu.find(
+    const mainMenu: MainMenu = response?.data?.data?.navigation_menu.find(
       (menu) => menu.name == 'Main menu'
     );
 
