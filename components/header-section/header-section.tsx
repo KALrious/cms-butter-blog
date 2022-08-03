@@ -1,4 +1,5 @@
 import MainMenuLink from '@/components/header-section/main-menu-link';
+import { useEffect, useRef, useState } from 'react';
 
 type Props = {
   mainMenuLinks: {
@@ -14,9 +15,29 @@ type Props = {
  *  mettre les sections navigation
  */
 export default function HeaderSection({ mainMenuLinks = [] }: Props) {
+  const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+  const navbarAreaEl = useRef(null);
+
+  const fixNavBar = () => {
+    if (navbarAreaEl.current) {
+      setIsNavbarSticky(window.pageYOffset > navbarAreaEl.current.offsetTop);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', fixNavBar);
+
+    return () => {
+      window.removeEventListener('scroll', fixNavBar);
+    };
+  }, []);
+
   return (
-    <header className="relative bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <header
+      className={`relative top-0 w-full bg-white ${
+        isNavbarSticky ? 'sticky' : ''
+      }`}>
+      <div ref={navbarAreaEl} className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <nav className="flex justify-start lg:w-0 flex-1">
             <a href="#">
