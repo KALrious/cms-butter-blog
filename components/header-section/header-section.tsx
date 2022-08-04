@@ -34,7 +34,7 @@ export default function HeaderSection({ mainMenuLinks = [] }: Props) {
 
   return (
     <header
-      className={`relative top-0 w-full bg-white ${
+      className={`relative top-0 w-full bg-white z-50${
         isNavbarSticky ? 'sticky' : ''
       }`}>
       <div ref={navbarAreaEl} className="max-w-7xl mx-auto px-4 sm:px-6">
