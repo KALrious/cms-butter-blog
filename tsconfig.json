@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/landing-page-sections/landing-page-section.js"  ],
   "exclude": [
     "node_modules"
   ]
