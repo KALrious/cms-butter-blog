@@ -18,10 +18,10 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
   slug,
   ...rest
 }) => (
-  <div className="col-lg-4 col-md-8 col-sm-10" {...rest}>
-    <div className="single-blog">
+  <div className="flex-1" {...rest}>
+    <div className="relative z-10 px-6 py-8 shadow-2xl shadow-slate-200 rounded-xl">
       {coverImage && (
-        <div className="blog-header">
+        <div className="relative h-52 w-full rounded-lg overflow-hidden">
           <Image
             src={coverImage}
             alt={coverImageAlt}
@@ -30,7 +30,7 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
           />
         </div>
       )}
-      <div className="blog-body">
+      <div className="pt-8 pb-6 flex flex-col gap-2">
         <h5 className="package-name">
           <Link href={`/blog/${slug}`}>
             <a>{title}</a>
