@@ -25,12 +25,12 @@ export default function FooterSection({ mainMenu }) {
               <p className="desc">Code like musician</p>
               <ul className="social-links">
                 <li>
-                  <a href="#0">
+                  <a href="https://www.linkedin.com/in/jean-gautier/">
                     <i className="lni lni-linkedin"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#0">
+                  <a href="https://twitter.com/kalrious">
                     <i className="lni lni-twitter"></i>
                   </a>
                 </li>
