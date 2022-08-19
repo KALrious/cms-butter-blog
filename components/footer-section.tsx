@@ -7,9 +7,9 @@ export default function FooterSection({ mainMenu }) {
   }));
 
   return (
-    <footer className="footer pt-120">
-      <div className="container">
-        <div className="row">
+    <footer className="footer pt-32">
+      <div className="container max-w-3xl w-full md:max-w-5xl lg:max-w-7xl m-auto">
+        <div className="row flex flex-wrap">
           <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
             <div className="footer-widget">
               <div className="logo">
@@ -32,6 +32,11 @@ export default function FooterSection({ mainMenu }) {
                 <li>
                   <a href="https://twitter.com/kalrious">
                     <i className="lni lni-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/KALrious">
+                    <i className="lni lni-github"></i>
                   </a>
                 </li>
               </ul>
