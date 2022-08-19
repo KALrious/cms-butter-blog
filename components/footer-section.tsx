@@ -9,10 +9,10 @@ export default function FooterSection({ mainMenu }) {
   return (
     <footer className="footer pt-32">
       <div className="container max-w-3xl w-full md:max-w-5xl lg:max-w-7xl m-auto">
-        <div className="row flex flex-wrap">
-          <div className="col-xl-3 col-lg-4 col-md-6 col-sm-10">
+        <div className="row flex flex-wrap flex-col lg:flex-row">
+          <div className="flex-1">
             <div className="footer-widget">
-              <div className="logo">
+              <div className="mb-8">
                 <a href="/">
                   <Image
                     width={50}
@@ -22,8 +22,8 @@ export default function FooterSection({ mainMenu }) {
                   />
                 </a>
               </div>
-              <p className="desc">Code like musician</p>
-              <ul className="social-links">
+              <p className="mb-6">On glisse ?</p>
+              <ul className="social-links flex items-center">
                 <li>
                   <a href="https://www.linkedin.com/in/jean-gautier/">
                     <i className="lni lni-linkedin"></i>
@@ -42,7 +42,7 @@ export default function FooterSection({ mainMenu }) {
               </ul>
             </div>
           </div>
-          <div className="col-xl-5 col-lg-4 col-md-12 col-sm-12 offset-xl-1">
+          <div className="flex-1">
             <div className="footer-widget">
               <h3>About Us</h3>
               <ul className="links">
@@ -54,8 +54,7 @@ export default function FooterSection({ mainMenu }) {
               </ul>
             </div>
           </div>
-
-          <div className="col-xl-3 col-lg-4 col-md-6">
+          <div className="flex-1">
             <div className="footer-widget">
               <h3>Subscribe Newsletter</h3>
               <form action="#">
