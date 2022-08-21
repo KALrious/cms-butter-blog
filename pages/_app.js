@@ -12,7 +12,6 @@ import HeaderSection from '@/components/header-section/header-section';
 import ScrollToButtonButton from '@/components/scroll-to-top-button';
 import Preloader from '@/components/preloader';
 
-import 'bootstrap/dist/css/bootstrap.css';
 import '@/css/lineicons.css';
 
 import '@/css/tiny-slider.min.css';
@@ -24,8 +23,6 @@ function MyApp({ Component, pageProps, mainMenu }) {
   const authToken = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
 
   useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.js');
-
     const showLoader = () => {
       setIsLoading(true);
     };
