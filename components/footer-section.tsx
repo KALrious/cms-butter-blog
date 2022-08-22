@@ -57,6 +57,8 @@ export default function FooterSection({ mainMenu }) {
                   </li>
                 ))}
               </ul>
+              <h6>Dev with the power of</h6>
+              <img className="h-8" src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH" />
             </div>
           </div>
           <div className="flex-1">
