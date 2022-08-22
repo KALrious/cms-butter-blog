@@ -1,3 +1,4 @@
+import Button from '@/components/button/button';
 import Link from 'next/link';
 
 import PostPreviewCondensed from './post-preview-condensed/post-preview-condensed';
@@ -23,7 +24,7 @@ const Blog = ({ posts }) => {
             </div>
             <div className="flex justify-center">
               <Link href={`/blog`}>
-                <a className="main-btn btn-hover mt-5">View All Blog Posts</a>
+                <Button component="a">View All Blog Posts</Button>
               </Link>
             </div>
           </div>

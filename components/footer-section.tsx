@@ -1,3 +1,4 @@
+import Button from '@/components/button/button';
 import Image from 'next/image';
 
 export default function FooterSection({ mainMenu }) {
@@ -7,7 +8,7 @@ export default function FooterSection({ mainMenu }) {
   }));
 
   return (
-    <footer className="footer pt-32">
+    <footer className="footer pt-32 px-2 lg:px-0">
       <div className="container max-w-3xl w-full md:max-w-5xl lg:max-w-7xl m-auto">
         <div className="row flex flex-wrap flex-col lg:flex-row">
           <div className="flex-1">
@@ -59,7 +60,9 @@ export default function FooterSection({ mainMenu }) {
               <h3>Subscribe Newsletter</h3>
               <form action="#">
                 <input type="email" placeholder="Email" />
-                <button className="main-btn btn-hover">Subscribe</button>
+                <Button component="button" className="w-full">
+                  Subscribe
+                </Button>
               </form>
             </div>
           </div>

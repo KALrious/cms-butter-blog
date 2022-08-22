@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC, HTMLAttributes } from 'react';
+import Button from '@/components/button/button';
 
 type Props = {
   title: string;
@@ -40,7 +41,7 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
       </div>
       <div className="blog-footer">
         <Link href={`/blog/${slug}`}>
-          <a className="main-btn btn-hover">Read More</a>
+          <Button component="a">Read More</Button>
         </Link>
       </div>
     </div>
