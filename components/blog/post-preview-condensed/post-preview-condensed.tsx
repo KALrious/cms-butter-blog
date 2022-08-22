@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { FC, HTMLAttributes } from 'react';
-import Button from '@/components/button/button';
+import Button from '@/components/DS/button/button';
 
 type Props = {
   title: string;

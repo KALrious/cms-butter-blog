@@ -1,4 +1,4 @@
-import Button from '@/components/button/button';
+import Button from '@/components/DS/button/button';
 import Link from 'next/link';
 
 import PostPreviewCondensed from './post-preview-condensed/post-preview-condensed';

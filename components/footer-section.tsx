@@ -1,4 +1,5 @@
-import Button from '@/components/button/button';
+import Button from '@/components/DS/button/button';
+import IconButton from '@/components/DS/icon-button/icon-button';
 import Image from 'next/image';
 
 export default function FooterSection({ mainMenu }) {
@@ -24,21 +25,23 @@ export default function FooterSection({ mainMenu }) {
                 </a>
               </div>
               <p className="mb-6">On glisse ?</p>
-              <ul className="social-links flex items-center">
+              <ul className="flex items-center gap-5">
                 <li>
-                  <a href="https://www.linkedin.com/in/jean-gautier/">
+                  <IconButton
+                    component="a"
+                    href="https://www.linkedin.com/in/jean-gautier/">
                     <i className="lni lni-linkedin"></i>
-                  </a>
+                  </IconButton>
                 </li>
                 <li>
-                  <a href="https://twitter.com/kalrious">
+                  <IconButton component="a" href="https://twitter.com/kalrious">
                     <i className="lni lni-twitter"></i>
-                  </a>
+                  </IconButton>
                 </li>
                 <li>
-                  <a href="https://github.com/KALrious">
+                  <IconButton component="a" href="https://github.com/KALrious">
                     <i className="lni lni-github"></i>
-                  </a>
+                  </IconButton>
                 </li>
               </ul>
             </div>
@@ -60,9 +63,7 @@ export default function FooterSection({ mainMenu }) {
               <h3>Subscribe Newsletter</h3>
               <form action="#">
                 <input type="email" placeholder="Email" />
-                <Button component="button" className="w-full">
-                  Subscribe
-                </Button>
+                <Button component="button">Subscribe</Button>
               </form>
             </div>
           </div>
