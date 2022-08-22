@@ -1,5 +1,6 @@
 import Button from '@/components/DS/button/button';
 import IconButton from '@/components/DS/icon-button/icon-button';
+import Input from '@/components/DS/input/input';
 import Image from 'next/image';
 
 export default function FooterSection({ mainMenu }) {
@@ -59,10 +60,10 @@ export default function FooterSection({ mainMenu }) {
             </div>
           </div>
           <div className="flex-1">
-            <div className="footer-widget">
-              <h3>Subscribe Newsletter</h3>
-              <form action="#">
-                <input type="email" placeholder="Email" />
+            <div className="flex flex-col">
+              <h3 className="mt-3 mb-5">Subscribe Newsletter</h3>
+              <form action="#" className="flex flex-col gap-3">
+                <Input type="email" placeholder="Email" />
                 <Button component="button">Subscribe</Button>
               </form>
             </div>
