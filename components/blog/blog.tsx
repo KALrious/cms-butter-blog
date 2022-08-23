@@ -9,7 +9,7 @@ const Blog = ({ posts }) => {
       <div className="mx-auto max-w-3xl px-3">
         <div className="flex">
           <div className="flex flex-col items-center gap-6">
-            <h2>Les dernier Posts du Blog</h2>
+            <h2>The Latest Blog Posts: </h2>
             <div className="flex flex-row justify-center gap-4">
               {posts.map((post) => (
                 <PostPreviewCondensed
