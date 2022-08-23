@@ -2,6 +2,7 @@ import Button from '@/components/DS/button/button';
 import IconButton from '@/components/DS/icon-button/icon-button';
 import Input from '@/components/DS/input/input';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FooterSection({ mainMenu }) {
   const links = mainMenu.map((link) => ({
@@ -58,7 +59,14 @@ export default function FooterSection({ mainMenu }) {
                 ))}
               </ul>
               <h6>Dev with the power of</h6>
-              <img className="h-8" src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH" />
+              <Link href="https://buttercms.com">
+                <a>
+                  <img
+                    className="h-8"
+                    src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
           <div className="flex-1">
