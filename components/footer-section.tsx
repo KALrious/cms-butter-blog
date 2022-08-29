@@ -11,7 +11,7 @@ export default function FooterSection({ mainMenu }) {
   }));
 
   return (
-    <footer className="footer pt-32 px-2 lg:px-0">
+    <footer className="footer pt-32 px-2">
       <div className="container max-w-3xl w-full md:max-w-5xl lg:max-w-7xl m-auto">
         <div className="row flex flex-wrap flex-col lg:flex-row">
           <div className="flex-1">
