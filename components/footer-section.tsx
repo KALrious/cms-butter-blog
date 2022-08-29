@@ -26,7 +26,7 @@ export default function FooterSection({ mainMenu }) {
                   />
                 </a>
               </div>
-              <p className="mb-6">On glisse ?</p>
+              <p className="mb-6">On glisse ?🏄🏻‍♂️</p>
               <ul className="flex items-center gap-5">
                 <li>
                   <IconButton
