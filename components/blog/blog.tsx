@@ -5,7 +5,7 @@ import PostPreviewCondensed from './post-preview-condensed/post-preview-condense
 
 const Blog = ({ posts }) => {
   return (
-    <section id="blog" className="pt-44">
+    <section id="blog" className="pt-40">
       <div className="mx-auto max-w-3xl px-3">
         <div className="flex">
           <div className="flex flex-col items-center gap-6">

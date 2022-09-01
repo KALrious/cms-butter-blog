@@ -8,9 +8,9 @@ type Props = {
 };
 
 const Hero: FC<Props> = ({ headline, subheadline, scrollAnchorId }) => (
-  <section id={scrollAnchorId}>
-    <div className="mx-auto max-w-3xl px-3 mt-16 before:absolute before:content-[''] before:w-full before:bg-gradient-to-b before:from-violet-300 before:to-sky-200 before:h-5/6 before:top-0 before:left-0 before:-z-10">
-      <WhiteWave className="fill-white	left-0 w-full bottom-[130px] absolute" />
+  <section id={scrollAnchorId} className="relative">
+    <div className="mx-auto max-w-3xl px-3 pt-16 pb-20 before:absolute before:content-[''] before:w-full before:bg-gradient-to-b before:from-violet-300 before:to-sky-200 before:h-full before:top-0 before:left-0 before:-z-10">
+      <WhiteWave className="fill-white	left-0 w-full bottom-0 absolute" />
       <div className="flex flex-col gap-4">
         <h1>{headline}</h1>
         <p>{subheadline}</p>
