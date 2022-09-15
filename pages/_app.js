@@ -10,7 +10,6 @@ import { getMainMenu } from '@/lib/api';
 import FooterSection from '@/components/footer-section';
 import HeaderSection from '@/components/header-section/header-section';
 import ScrollToButtonButton from '@/components/scroll-to-top-button';
-import Preloader from '@/components/preloader';
 
 import '@/css/lineicons.css';
 
@@ -73,7 +72,7 @@ function MyApp({ Component, pageProps, mainMenu }) {
         />
       </Head>
 
-      {isLoading && <Preloader></Preloader>}
+      {isLoading && <Loader />}
 
       {!isLoading && pageLayout}
     </>

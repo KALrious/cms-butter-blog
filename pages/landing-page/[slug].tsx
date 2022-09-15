@@ -8,12 +8,12 @@ import { getLandingPage, getLandingPages, getPostsData } from '@/lib/api';
 
 import LandingPageSection from '@/components/landing-page-sections/landing-page-section';
 import Blog from '@/components/blog/blog';
-import Preloader from '@/components/preloader';
+import Loader from '@/components/DS/loader/loader';
 
 export default function LandingPage({ page, blogPosts }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <Preloader />;
+    return <Loader />;
   }
 
   if (!page) {

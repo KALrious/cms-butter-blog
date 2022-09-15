@@ -2,8 +2,8 @@ import dynamic from 'next/dynamic';
 
 import camelcaseKeys from 'camelcase-keys';
 
-import Preloader from '@/components/preloader';
 import MissingSection from './missing-section';
+import Loader from '../DS/loader/loader';
 
 export default function LandingPageSection({ type, sectionData }) {
   const sectionsComponentPaths = () => ({
@@ -13,7 +13,7 @@ export default function LandingPageSection({ type, sectionData }) {
           () => () => MissingSection
         ),
       {
-        loading: Preloader,
+        loading: Loader,
       }
     ),
     two_column_with_image: dynamic(
@@ -22,7 +22,7 @@ export default function LandingPageSection({ type, sectionData }) {
           '@/components/landing-page-sections/two-column-with-image'
         ).catch(() => () => MissingSection),
       {
-        loading: Preloader,
+        loading: Loader,
       }
     ),
     features: dynamic(
@@ -31,7 +31,7 @@ export default function LandingPageSection({ type, sectionData }) {
           () => () => MissingSection
         ),
       {
-        loading: Preloader,
+        loading: Loader,
       }
     ),
     testimonials: dynamic(
@@ -40,7 +40,7 @@ export default function LandingPageSection({ type, sectionData }) {
           () => () => MissingSection
         ),
       {
-        loading: Preloader,
+        loading: Loader,
       }
     ),
   });
