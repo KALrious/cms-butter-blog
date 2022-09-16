@@ -10,6 +10,7 @@ import { getMainMenu } from '@/lib/api';
 import FooterSection from '@/components/footer-section';
 import HeaderSection from '@/components/header-section/header-section';
 import ScrollToButtonButton from '@/components/scroll-to-top-button';
+import Loader from '@/components/DS/loader/loader';
 
 import '@/css/lineicons.css';
 
