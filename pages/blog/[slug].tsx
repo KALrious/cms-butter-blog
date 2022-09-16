@@ -76,8 +76,8 @@ export default function BlogPost({ post, categories }) {
         </div>
       </section>
 
-      <section className="blog-post">
-        <div className="container">
+      <section className="blog-post mt-4">
+        <div className="container m-auto">
           <div className="row justify-content-center">
             <div className="col-lg-8 col-md-12 col-12">
               <div className="single-post">
