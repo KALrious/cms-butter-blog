@@ -10,7 +10,7 @@ import { getPost, getPostsData, getCategories } from '@/lib/api';
 import Loader from '@/components/DS/loader/loader';
 import SearchWidget from '@/components/blog/search-widget';
 import CategoriesWidget from '@/components/blog/categories-widget';
-import HeroBlog from 'pages/blog/hero-blog';
+import HeroBlog from '@/components/DS/hero-blog';
 import AuthorCard from '@/components/DS/author-card/author-card';
 import HumanDate from '@/components/DS/human-date/human-date';
 import BreadCrumb from '@/components/DS/bread-crumb/bread-crumb';

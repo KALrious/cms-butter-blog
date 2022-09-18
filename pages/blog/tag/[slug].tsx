@@ -4,7 +4,7 @@ import camelcaseKeys from 'camelcase-keys';
 import { getPostsData, getCategories, getTags } from '@/lib/api';
 import CategoriesWidget from '@/components/blog/categories-widget';
 import SearchWidget from '@/components/blog/search-widget';
-import HeroBlog from 'pages/blog/hero-blog';
+import HeroBlog from '@/components/DS/hero-blog';
 import PostsList from '@/components/blog/posts-list';
 import BreadCrumb from '@/components/DS/bread-crumb/bread-crumb';
 

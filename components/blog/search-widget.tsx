@@ -4,7 +4,7 @@ import Search from '@/components/DS/search/search';
 export default function SearchWidget() {
   return (
     <BoxWithTitle title="Search This Site">
-      <Search href="blog/search" />
+      <Search href="/blog/search" />
     </BoxWithTitle>
   );
 }
