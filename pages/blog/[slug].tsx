@@ -8,10 +8,10 @@ import camelcaseKeys from 'camelcase-keys';
 import { getPost, getPostsData, getCategories } from '@/lib/api';
 
 import HumanDate from '@/components/human-date';
-import CategoriesWidget from '@/components/blog/categories-widget';
 import AuthorCard from '@/components/author-card';
 import Loader from '@/components/DS/loader/loader';
 import SearchWidget from '@/components/blog/search-widget';
+import CategoriesWidget from '@/components/blog/categories-widget';
 
 export default function BlogPost({ post, categories }) {
   const router = useRouter();
@@ -53,17 +53,17 @@ export default function BlogPost({ post, categories }) {
             <div>
               <div className="text-center">
                 <h2>{post.title}</h2>
-                <ul className="breadcrumb-nav flex justify-center mt-4 sm:flex-row list-none p-0 m-0">
-                  <li className="after:content-['>']  after:text-xs after:right-3 right-3">
+                <ul className="flex justify-center mt-4 sm:flex-row list-none p-0 m-0">
+                  <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
                     <Link href="/">
-                      <a className="text-sky-400 font-medium inline-block relative pr-4 mr-4 capitalize">
+                      <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
                         Home
                       </a>
                     </Link>
                   </li>
-                  <li className="after:content-['>']  after:text-xs after:right-3 right-3">
+                  <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
                     <Link href="/blog">
-                      <a className="text-sky-400 font-medium inline-block relative pr-4 mr-4 capitalize">
+                      <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
                         Blog
                       </a>
                     </Link>
