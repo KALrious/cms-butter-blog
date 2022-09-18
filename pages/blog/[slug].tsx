@@ -12,6 +12,7 @@ import AuthorCard from '@/components/author-card';
 import Loader from '@/components/DS/loader/loader';
 import SearchWidget from '@/components/blog/search-widget';
 import CategoriesWidget from '@/components/blog/categories-widget';
+import HeroBlog from 'pages/blog/hero-blog';
 
 export default function BlogPost({ post, categories }) {
   const router = useRouter();
@@ -48,32 +49,25 @@ export default function BlogPost({ post, categories }) {
         <meta name="twitter:description" content={post.metaDescription} />
       </Head>
       <section id="blog-header" className="single-post-nav">
-        <div className="mx-auto max-w-3xl px-3 pt-16 pb-20 before:absolute before:content-[''] before:w-full before:bg-gradient-to-b before:from-violet-300 before:to-sky-200 before:h-full before:top-0 before:left-0 before:-z-10">
-          <div>
-            <div>
-              <div className="text-center">
-                <h2>{post.title}</h2>
-                <ul className="flex justify-center mt-4 sm:flex-row list-none p-0 m-0">
-                  <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
-                    <Link href="/">
-                      <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
-                        Home
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
-                    <Link href="/blog">
-                      <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
-                        Blog
-                      </a>
-                    </Link>
-                  </li>
-                  <li>{post.title}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <HeroBlog title={post.title}>
+          <ul className="flex justify-center mt-4 sm:flex-row list-none p-0 m-0">
+            <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
+              <Link href="/">
+                <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
+                  Home
+                </a>
+              </Link>
+            </li>
+            <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
+              <Link href="/blog">
+                <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
+                  Blog
+                </a>
+              </Link>
+            </li>
+            <li>{post.title}</li>
+          </ul>
+        </HeroBlog>
       </section>
 
       <section className="blog-post mt-4">
