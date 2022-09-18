@@ -6,25 +6,18 @@ import CategoriesWidget from '@/components/blog/categories-widget';
 import SearchWidget from '@/components/blog/search-widget';
 import HeroBlog from 'pages/blog/hero-blog';
 import PostsList from '@/components/blog/posts-list';
+import BreadCrumb from '@/components/DS/bread-crumb/bread-crumb';
 
 export default function Tag({ posts, categories, slug }) {
   return (
     <>
       <section id="blog-roll" className="blog-roll-nav">
         <HeroBlog title="Blog Posts by Tag">
-          <ul className="breadcrumb-nav">
-            <li>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-            </li>
-            <li>Tag: {slug}</li>
-          </ul>
+          <BreadCrumb>
+            <BreadCrumb.Link href="/" title="Home" />
+            <BreadCrumb.Link href="/blog" title="Blog" />
+            <BreadCrumb.Current title={`Tag: ${slug}`} />
+          </BreadCrumb>
         </HeroBlog>
       </section>
 

@@ -13,6 +13,7 @@ import CategoriesWidget from '@/components/blog/categories-widget';
 import HeroBlog from 'pages/blog/hero-blog';
 import AuthorCard from '@/components/DS/author-card/author-card';
 import HumanDate from '@/components/DS/human-date/human-date';
+import BreadCrumb from '@/components/DS/bread-crumb/bread-crumb';
 
 export default function BlogPost({ post, categories }) {
   const router = useRouter();
@@ -50,23 +51,11 @@ export default function BlogPost({ post, categories }) {
       </Head>
       <section id="blog-header" className="single-post-nav">
         <HeroBlog title={post.title}>
-          <ul className="flex justify-center mt-4 sm:flex-row list-none p-0 m-0">
-            <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
-              <Link href="/">
-                <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
-              <Link href="/blog">
-                <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
-                  Blog
-                </a>
-              </Link>
-            </li>
-            <li>{post.title}</li>
-          </ul>
+          <BreadCrumb>
+            <BreadCrumb.Link href="/" title="Home" />
+            <BreadCrumb.Link href="/blog" title="Blog" />
+            <BreadCrumb.Current title={post.title} />
+          </BreadCrumb>
         </HeroBlog>
       </section>
 
