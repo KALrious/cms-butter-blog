@@ -9,9 +9,9 @@ import { getPost, getPostsData, getCategories } from '@/lib/api';
 
 import HumanDate from '@/components/human-date';
 import CategoriesWidget from '@/components/blog/categories-widget';
-import SearchWidget from '@/components/blog/search-widget';
 import AuthorCard from '@/components/author-card';
 import Loader from '@/components/DS/loader/loader';
+import SearchWidget from '@/components/blog/search-widget';
 
 export default function BlogPost({ post, categories }) {
   const router = useRouter();
@@ -115,8 +115,9 @@ export default function BlogPost({ post, categories }) {
                   </div>
                 )}
                 <div
-                  className="single-post-body prose"
-                  dangerouslySetInnerHTML={{ __html: post.body }}></div>
+                  className="single-post-body prose px-8 py-14"
+                  dangerouslySetInnerHTML={{ __html: post.body }}
+                />
               </div>
             </div>
 

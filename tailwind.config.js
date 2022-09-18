@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: 'none',
+          },
+        },
+      },
+      boxShadow: {
+        custom: '0px 0px 50px rgb(183 199 240 / 25%)',
+      },
       animation: {
         'spin-slow': 'spin 1568.23529647ms linear infinite',
         'spin-easespin':

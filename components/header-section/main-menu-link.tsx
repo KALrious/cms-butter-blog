@@ -14,7 +14,7 @@ export default function MainMenuLink({
   return (
     <li
       onClick={callbackOnClick}
-      className="prose-a:text-gray-600 hover:prose-a:text-black active:prose-a:text-black">
+      className="typography-a:text-gray-600 hover:typography-a:text-black active:typography-a:text-black">
       <a href={`/${url}`}>{label}</a>
     </li>
   );
