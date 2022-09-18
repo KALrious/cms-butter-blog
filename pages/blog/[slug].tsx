@@ -7,12 +7,12 @@ import camelcaseKeys from 'camelcase-keys';
 
 import { getPost, getPostsData, getCategories } from '@/lib/api';
 
-import HumanDate from '@/components/human-date';
-import AuthorCard from '@/components/author-card';
 import Loader from '@/components/DS/loader/loader';
 import SearchWidget from '@/components/blog/search-widget';
 import CategoriesWidget from '@/components/blog/categories-widget';
 import HeroBlog from 'pages/blog/hero-blog';
+import AuthorCard from '@/components/DS/author-card/author-card';
+import HumanDate from '@/components/DS/human-date/human-date';
 
 export default function BlogPost({ post, categories }) {
   const router = useRouter();
