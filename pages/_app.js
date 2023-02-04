@@ -23,8 +23,6 @@ function MyApp({ Component, pageProps, mainMenu }) {
   const router = useRouter();
   const authToken = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
 
-  AxeptioInjector();
-
   useEffect(() => {
     const showLoader = () => {
       setIsLoading(true);
@@ -75,6 +73,7 @@ function MyApp({ Component, pageProps, mainMenu }) {
           href="https://buttercms.com/static/v2/images/favicon.png"
         />
         <Analytics />
+        <AxeptioInjector />
       </Head>
 
       {isLoading && <Loader />}
