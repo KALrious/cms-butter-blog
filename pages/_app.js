@@ -3,11 +3,11 @@ import { useEffect, useState } from 'react';
 import Router from 'next/router';
 import App from 'next/app';
 import Head from 'next/head';
-import TagManager from 'react-gtm-module';
 import { useRouter } from 'next/router';
 
 import { getMainMenu } from '@/lib/api';
-
+import AxeptioInjector from '@/lib/axeptio-injector';
+import Analytics from '@/lib/analytics';
 import FooterSection from '@/components/footer-section';
 import HeaderSection from '@/components/header-section/header-section';
 import ScrollToButtonButton from '@/components/scroll-to-top-button';
@@ -18,16 +18,12 @@ import '@/css/lineicons.css';
 import '@/css/tiny-slider.min.css';
 import '@/css/main.css';
 
-const GTM_TAG = process.env.NEXT_PUBLIC_GTM_ID;
-
 function MyApp({ Component, pageProps, mainMenu }) {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const authToken = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
 
-  useEffect(() => {
-    TagManager.initialize({ gtmId: GTM_TAG });
-  }, []);
+  AxeptioInjector();
 
   useEffect(() => {
     const showLoader = () => {
@@ -78,6 +74,7 @@ function MyApp({ Component, pageProps, mainMenu }) {
           type="image/x-icon"
           href="https://buttercms.com/static/v2/images/favicon.png"
         />
+        <Analytics />
       </Head>
 
       {isLoading && <Loader />}
