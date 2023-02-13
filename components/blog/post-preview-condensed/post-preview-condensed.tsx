@@ -19,7 +19,7 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
   slug,
   ...rest
 }) => (
-  <div className="flex-1" {...rest}>
+  <div className="flex-1 min-w-[296px]" {...rest}>
     <div className="relative z-10 px-6 py-8 shadow-2xl shadow-slate-200 rounded-xl">
       {coverImage && (
         <div className="relative h-52 w-full rounded-lg overflow-hidden">

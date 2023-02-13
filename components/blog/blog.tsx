@@ -10,7 +10,7 @@ const Blog = ({ posts }) => {
         <div className="flex">
           <div className="flex flex-col items-center gap-6">
             <h2>The Latest Blog Posts: </h2>
-            <div className="flex flex-row justify-center gap-4">
+            <div className="flex flex-row justify-center gap-4 flex-wrap">
               {posts.map((post) => (
                 <PostPreviewCondensed
                   key={post.slug}
