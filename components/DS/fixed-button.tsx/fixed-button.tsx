@@ -13,7 +13,7 @@ const FixedButton: FC<HTMLAttributes<HTMLButtonElement> & Props> = ({
   const HtmlTag = component as ElementType;
   return (
     <HtmlTag
-      className="fixed w-11 h-11 bottom-8 right-8 rounded-md bg-sky-500 text-white hover:opacity-80 hover:cursor-pointer flex justify-center items-center"
+      className="fixed w-11 h-11 bottom-8 right-8 bg-opacity-100 z-50 rounded-md bg-sky-500 text-white hover:opacity-80 hover:cursor-pointer flex justify-center items-center"
       {...rest}>
       {children}
     </HtmlTag>
