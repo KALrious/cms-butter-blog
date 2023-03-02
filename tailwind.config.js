@@ -14,6 +14,9 @@ module.exports = {
           },
         },
       },
+      filter: {
+        custom: 'drop-shadow(7px 5px 0px rgba(0,0,0,1)',
+      },
       boxShadow: {
         custom: '0px 0px 50px rgb(183 199 240 / 25%)',
       },

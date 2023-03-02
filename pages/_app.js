@@ -45,16 +45,21 @@ function MyApp({ Component, pageProps, mainMenu }) {
     };
   }, [authToken, router]);
 
-  const pageLayout = authToken ? (
-    <>
-      <HeaderSection mainMenuLinks={mainMenu} />
+  const pageLayout = () => {
+    if (router.pathname.includes('experiments')) {
+      return <Component {...pageProps} />;
+    }
+    return authToken ? (
+      <>
+        <HeaderSection mainMenuLinks={mainMenu} />
+        <Component {...pageProps} />
+        <FooterSection mainMenu={mainMenu} />
+        <ScrollToButtonButton />
+      </>
+    ) : (
       <Component {...pageProps} />
-      <FooterSection mainMenu={mainMenu} />
-      <ScrollToButtonButton />
-    </>
-  ) : (
-    <Component {...pageProps} />
-  );
+    );
+  };
 
   return (
     <>
@@ -82,7 +87,7 @@ function MyApp({ Component, pageProps, mainMenu }) {
 
       {isLoading && <Loader />}
 
-      {!isLoading && pageLayout}
+      {!isLoading && pageLayout()}
     </>
   );
 }
