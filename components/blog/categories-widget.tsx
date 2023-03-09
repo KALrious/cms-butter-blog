@@ -11,9 +11,9 @@ type Props = {
 export default function CategoriesWidget({ categories }: Props) {
   return (
     <BoxWithTitle title="Categories">
-      <ul className="flex">
+      <ul className="flex flex-wrap">
         {categories.map((category) => (
-          <li key={category.slug}>
+          <li className="flex" key={category.slug}>
             <CategorieLink
               href={`/blog/category/${category.slug}`}
               name={category.name}
