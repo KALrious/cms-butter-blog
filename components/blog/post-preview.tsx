@@ -74,9 +74,11 @@ export default function PostsPreview({
         <div
           className="blog-roll-card-body prose"
           dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-        <div className="blog-roll-card-footer text-center mb-4">
+        <div className="flex justify-center text-center mb-4">
           <Link href={`/blog/${slug}`}>
-            <Button component="a">Read More</Button>
+            <Button className="static" component="a">
+              Read More
+            </Button>
           </Link>
         </div>
       </div>
