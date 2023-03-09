@@ -35,7 +35,7 @@ export default function PostsPreview({
 }: Props) {
   return (
     <div className="col-12 col-lg-6">
-      <div className="blog-roll-card">
+      <div className="blog-roll-card flex flex-col">
         <div className="blog-roll-card-meta">
           <h2 className="blog-roll-card-header">
             <Link href={`/blog/${slug}`}>
@@ -71,15 +71,17 @@ export default function PostsPreview({
             />
           </div>
         )}
-        <div
-          className="blog-roll-card-body prose"
-          dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-        <div className="flex justify-center text-center mb-4">
-          <Link href={`/blog/${slug}`}>
-            <Button className="static" component="a">
-              Read More
-            </Button>
-          </Link>
+        <div className="flex flex-col justify-between">
+          <div
+            className="blog-roll-card-body prose"
+            dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+          <div className="flex justify-center text-center mb-4">
+            <Link href={`/blog/${slug}`}>
+              <Button className="static" component="a">
+                Read More
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
