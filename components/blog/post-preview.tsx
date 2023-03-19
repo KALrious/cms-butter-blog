@@ -34,8 +34,8 @@ export default function PostsPreview({
   slug,
 }: Props) {
   return (
-    <div className="col-12 col-lg-6">
-      <div className="flex flex-col">
+    <div className="col-12 col-lg-6 shadow-custom rounded-xl">
+      <div className="flex flex-col h-full">
         <div className="blog-roll-card-meta">
           <h2 className="blog-roll-card-header">
             <Link href={`/blog/${slug}`}>
@@ -61,20 +61,22 @@ export default function PostsPreview({
             ))}
           </ul>
         </div>
-        {coverImage && (
-          <div className="single-post-thumbnail">
-            <Image
-              src={coverImage}
-              alt={coverImageAlt}
-              layout="fill"
-              objectFit="cover"
-            />
+        <div className="flex flex-col justify-between h-full">
+          <div>
+            {coverImage && (
+              <div className="single-post-thumbnail">
+                <Image
+                  src={coverImage}
+                  alt={coverImageAlt}
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            )}
+            <div
+              className="blog-roll-card-body prose"
+              dangerouslySetInnerHTML={{ __html: excerpt }}></div>
           </div>
-        )}
-        <div className="flex flex-col justify-between">
-          <div
-            className="blog-roll-card-body prose"
-            dangerouslySetInnerHTML={{ __html: excerpt }}></div>
           <div className="flex justify-center text-center mb-4">
             <Link href={`/blog/${slug}`}>
               <Button className="static" component="a">
