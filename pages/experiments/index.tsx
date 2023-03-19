@@ -13,8 +13,9 @@ const Experiments: FC = () => {
           Un endroit ou vous pouvez retrouver toutes mes expérimentations
           public:
         </p>
-        <div className="flex justify-center">
-          <Link href="/experiments/ui-login">UI Login</Link>
+        <div className="flex justify-center gap-4">
+          <Link href="experiments/ui-login">UI Login</Link>
+          <Link href="/">Home</Link>
         </div>
       </div>
       <div className="relative h-96">

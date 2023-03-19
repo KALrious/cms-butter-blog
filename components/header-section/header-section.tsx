@@ -58,6 +58,7 @@ export default function HeaderSection({ mainMenuLinks = [] }: Props) {
                   // callbackOnClick={inactivateMenu}
                 />
               ))}
+              <MainMenuLink url="experiments" label="lab" />
             </ul>
           </nav>
         </div>
