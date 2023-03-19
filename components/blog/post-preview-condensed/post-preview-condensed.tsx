@@ -20,26 +20,28 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
   ...rest
 }) => (
   <div className="flex-1 min-w-[296px]" {...rest}>
-    <div className="relative z-10 px-6 py-8 shadow-2xl shadow-slate-200 rounded-xl">
-      {coverImage && (
-        <div className="relative h-52 w-full rounded-lg overflow-hidden">
-          <Image
-            src={coverImage}
-            alt={coverImageAlt}
-            layout="fill"
-            objectFit="cover"
-          />
+    <div className="relative z-10 px-6 py-8 shadow-2xl shadow-slate-200 rounded-xl h-full flex flex-col justify-between">
+      <div>
+        {coverImage && (
+          <div className="relative h-52 w-full rounded-lg overflow-hidden">
+            <Image
+              src={coverImage}
+              alt={coverImageAlt}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        )}
+        <div className="pt-8 pb-6 flex flex-col gap-2">
+          <h5 className="package-name">
+            <Link href={`/blog/${slug}`}>
+              <a>{title}</a>
+            </Link>
+          </h5>
+          <p>{excerpt}</p>
         </div>
-      )}
-      <div className="pt-8 pb-6 flex flex-col gap-2">
-        <h5 className="package-name">
-          <Link href={`/blog/${slug}`}>
-            <a>{title}</a>
-          </Link>
-        </h5>
-        <p>{excerpt}</p>
       </div>
-      <div className="blog-footer">
+      <div className="flex justify-center">
         <Link href={`/blog/${slug}`}>
           <Button component="a">Read More</Button>
         </Link>
