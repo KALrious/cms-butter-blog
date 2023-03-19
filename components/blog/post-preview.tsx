@@ -35,7 +35,7 @@ export default function PostsPreview({
 }: Props) {
   return (
     <div className="col-12 col-lg-6">
-      <div className="blog-roll-card flex flex-col">
+      <div className="flex flex-col">
         <div className="blog-roll-card-meta">
           <h2 className="blog-roll-card-header">
             <Link href={`/blog/${slug}`}>
