@@ -9,7 +9,12 @@ const Blog = ({ posts }) => {
       <div className="mx-auto max-w-3xl px-3">
         <div className="flex">
           <div className="flex flex-col items-center gap-6">
-            <h2>The Latest Blog Posts: </h2>
+            <div className="flex">
+              <h2 className="will-change-transform animate-type whitespace-nowrap overflow-hidden">
+                The Latest Blog Posts:
+              </h2>
+              <span className="box-border inline-block w-0 h-8 ml-1 bg-black md:-mb-4 md:h-16 animate-cursor will-change-transform rounded-m after:content-[''] after:rounded-m after:absolute after:top-0 after:left-0 after:w-1 after:h-full after:bg-black after:animate-cursor after:will-change-transform"></span>
+            </div>
             <div className="flex flex-row justify-center gap-4 flex-wrap">
               {posts.map((post) => (
                 <PostPreviewCondensed
