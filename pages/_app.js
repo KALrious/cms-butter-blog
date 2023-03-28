@@ -79,9 +79,6 @@ function MyApp({ Component, pageProps, mainMenu }) {
           type="image/x-icon"
           href="https://buttercms.com/static/v2/images/favicon.png"
         />
-        <script
-          src="//code.tidio.co/5b3funnlc5re0lkebaqcdxoqpgo6dkgt.js"
-          async></script>
         <Analytics />
       </Head>
 
