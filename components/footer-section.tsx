@@ -31,17 +31,24 @@ export default function FooterSection({ mainMenu }) {
                 <li>
                   <IconButton
                     component="a"
+                    aria-label="linkedin lien"
                     href="https://www.linkedin.com/in/jean-gautier/">
                     <i className="lni lni-linkedin"></i>
                   </IconButton>
                 </li>
                 <li>
-                  <IconButton component="a" href="https://twitter.com/kalrious">
+                  <IconButton
+                    component="a"
+                    aria-label="twitter lien"
+                    href="https://twitter.com/kalrious">
                     <i className="lni lni-twitter"></i>
                   </IconButton>
                 </li>
                 <li>
-                  <IconButton component="a" href="https://github.com/KALrious">
+                  <IconButton
+                    component="a"
+                    aria-label="github lien"
+                    href="https://github.com/KALrious">
                     <i className="lni lni-github"></i>
                   </IconButton>
                 </li>
@@ -60,10 +67,11 @@ export default function FooterSection({ mainMenu }) {
               </ul>
               <h6>Dev with the power of</h6>
               <Link href="https://buttercms.com">
-                <a>
+                <a aria-label="buttercms lien">
                   <img
                     className="h-8"
                     src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH"
+                    alt="buttercms image"
                   />
                 </a>
               </Link>
