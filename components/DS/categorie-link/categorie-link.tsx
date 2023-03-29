@@ -21,11 +21,13 @@ type Props = {
 
 const CategorieLink: FC<Props> = ({ href, name }) => {
   return (
-    <Link href={href}>
-      <a className="text-sm content-center py-2 px-4 mr-2 mb-3 rounded-md border border-sky-400">
-        {name}
-      </a>
-    </Link>
+    (<Link
+      href={href}
+      className="text-sm content-center py-2 px-4 mr-2 mb-3 rounded-md border border-sky-400">
+
+      {name}
+
+    </Link>)
   );
 };
 

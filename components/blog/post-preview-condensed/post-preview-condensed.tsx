@@ -35,14 +35,14 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
         <div className="pt-8 pb-6 flex flex-col gap-2">
           <h5 className="package-name">
             <Link href={`/blog/${slug}`}>
-              <a>{title}</a>
+              {title}
             </Link>
           </h5>
           <p>{excerpt}</p>
         </div>
       </div>
       <div className="flex justify-center">
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`} legacyBehavior>
           <Button component="a" href={`/blog/${slug}`}>
             Read More
           </Button>

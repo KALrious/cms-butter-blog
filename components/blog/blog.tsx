@@ -28,7 +28,7 @@ const Blog = ({ posts }) => {
               ))}
             </div>
             <div className="flex justify-center">
-              <Link href={`/blog`}>
+              <Link href={`/blog`} legacyBehavior>
                 <Button component="a" href={`/blog`}>
                   View All Blog Posts
                 </Button>

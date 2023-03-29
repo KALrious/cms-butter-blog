@@ -39,7 +39,7 @@ export default function PostsPreview({
         <div className="blog-roll-card-meta">
           <h2 className="blog-roll-card-header">
             <Link href={`/blog/${slug}`}>
-              <a>{title}</a>
+              {title}
             </Link>
           </h2>
           <ul className="blog-roll-card-meta-info">
@@ -53,9 +53,9 @@ export default function PostsPreview({
             {tags.map((tag) => (
               <li key={tag.slug}>
                 <Link href={`/blog/tag/${tag.slug}`}>
-                  <a>
-                    <i className="lni lni-tag"></i> {tag.name}
-                  </a>
+
+                  <i className="lni lni-tag"></i> {tag.name}
+
                 </Link>
               </li>
             ))}
@@ -78,7 +78,7 @@ export default function PostsPreview({
               dangerouslySetInnerHTML={{ __html: excerpt }}></div>
           </div>
           <div className="flex justify-center text-center mb-4">
-            <Link href={`/blog/${slug}`}>
+            <Link href={`/blog/${slug}`} legacyBehavior>
               <Button className="static" component="a">
                 Read More
               </Button>

@@ -8,10 +8,12 @@ export type BCLinkProps = {
 
 const BCLink: FC<BCLinkProps> = ({ href, title }) => (
   <li className="after:content-['>']  after:text-xs after:right-3 right-3 mr-4">
-    <Link href={href}>
-      <a className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
-        {title}
-      </a>
+    <Link
+      href={href}
+      className="text-sky-400 font-medium inline-block relative pr-4 capitalize">
+
+      {title}
+
     </Link>
   </li>
 );

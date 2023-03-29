@@ -66,14 +66,14 @@ export default function FooterSection({ mainMenu }) {
                 ))}
               </ul>
               <h6>Dev with the power of</h6>
-              <Link href="https://buttercms.com">
-                <a aria-label="buttercms lien">
-                  <img
-                    className="h-8"
-                    src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH"
-                    alt="buttercms image"
-                  />
-                </a>
+              <Link href="https://buttercms.com" aria-label="buttercms lien">
+
+                <img
+                  className="h-8"
+                  src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH"
+                  alt="buttercms image"
+                />
+
               </Link>
             </div>
           </div>
