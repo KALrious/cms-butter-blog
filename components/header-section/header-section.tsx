@@ -1,4 +1,6 @@
 import MainMenuLink from '@/components/header-section/main-menu-link';
+import SpiderMan from '@/components/svg/spider-man';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 type Props = {
@@ -42,10 +44,11 @@ export default function HeaderSection({ mainMenuLinks = [] }: Props) {
           <nav className="flex justify-start lg:w-0 flex-1">
             <a href="/">
               <span className="sr-only">Kalrious Blog</span>
-              <img
-                className="h-8 w-auto sm:h-8"
+              <Image
                 src="/images/spider.png"
                 alt="home"
+                width={32}
+                height={32}
               />
             </a>
             <ul id="nav" className="flex flex-1 justify-end gap-4 mr-2">
