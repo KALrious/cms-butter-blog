@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 import MainMenu from './main-menu/main-menu';
 

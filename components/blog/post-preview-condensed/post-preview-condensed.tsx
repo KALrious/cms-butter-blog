@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { FC, HTMLAttributes } from 'react';
 import Button from '@/components/DS/button/button';
 

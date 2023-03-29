@@ -1,7 +1,7 @@
 import Button from '@/components/DS/button/button';
 import IconButton from '@/components/DS/icon-button/icon-button';
 import Input from '@/components/DS/input/input';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 
 export default function FooterSection({ mainMenu }) {

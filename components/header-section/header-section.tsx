@@ -1,6 +1,6 @@
 import MainMenuLink from '@/components/header-section/main-menu-link';
 import SpiderMan from '@/components/svg/spider-man';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { useEffect, useRef, useState } from 'react';
 
 type Props = {
