@@ -1,7 +1,7 @@
 import Button from '@/components/DS/button/button';
 import IconButton from '@/components/DS/icon-button/icon-button';
 import Input from '@/components/DS/input/input';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 
 export default function FooterSection({ mainMenu }) {
@@ -67,13 +67,13 @@ export default function FooterSection({ mainMenu }) {
               </ul>
               <h6>Dev with the power of</h6>
               <Link href="https://buttercms.com" aria-label="buttercms lien">
-
-                <img
+                <Image
                   className="h-8"
+                  width={132}
+                  height={32}
                   src="https://cdn.buttercms.com/PGJPyIwaQ2KnOA8UyKfH"
                   alt="buttercms image"
                 />
-
               </Link>
             </div>
           </div>
