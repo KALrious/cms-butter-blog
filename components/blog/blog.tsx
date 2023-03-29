@@ -29,7 +29,9 @@ const Blog = ({ posts }) => {
             </div>
             <div className="flex justify-center">
               <Link href={`/blog`}>
-                <Button component="a">View All Blog Posts</Button>
+                <Button component="a" href={`/blog`}>
+                  View All Blog Posts
+                </Button>
               </Link>
             </div>
           </div>

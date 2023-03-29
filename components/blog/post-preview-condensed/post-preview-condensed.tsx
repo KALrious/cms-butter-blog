@@ -43,7 +43,9 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
       </div>
       <div className="flex justify-center">
         <Link href={`/blog/${slug}`}>
-          <Button component="a">Read More</Button>
+          <Button component="a" href={`/blog/${slug}`}>
+            Read More
+          </Button>
         </Link>
       </div>
     </div>
