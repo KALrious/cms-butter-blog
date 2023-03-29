@@ -12,6 +12,7 @@ import FooterSection from '@/components/footer-section';
 import HeaderSection from '@/components/header-section/header-section';
 import ScrollToButtonButton from '@/components/scroll-to-top-button';
 import Loader from '@/components/DS/loader/loader';
+import { sen } from '@/components/DS/Sen/Sen';
 
 import '@/css/lineicons.css';
 
@@ -81,10 +82,10 @@ function MyApp({ Component, pageProps, mainMenu }) {
         />
         <Analytics />
       </Head>
-
-      {isLoading && <Loader />}
-
-      {!isLoading && pageLayout()}
+      <main className={sen.className}>
+        {isLoading && <Loader />}
+        {!isLoading && pageLayout()}
+      </main>
     </>
   );
 }
