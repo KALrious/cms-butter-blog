@@ -1,5 +1,6 @@
 import Button from '@/components/DS/button/button';
 import FixedButton from '@/components/DS/fixed-button.tsx/fixed-button';
+import ChevronUp from '@/components/svg/chevron-up';
 import { useEffect, useState } from 'react';
 
 export default function ScrollToButtonButton() {
@@ -22,11 +23,8 @@ export default function ScrollToButtonButton() {
   return (
     <>
       {hasScrollToTopButton && (
-        <FixedButton
-          component="a"
-          href="#"
-          >
-          <i className="lni lni-chevron-up"></i>
+        <FixedButton component="a" href="#">
+          <ChevronUp />
         </FixedButton>
       )}
     </>

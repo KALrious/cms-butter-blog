@@ -1,6 +1,9 @@
 import Button from '@/components/DS/button/button';
 import IconButton from '@/components/DS/icon-button/icon-button';
 import Input from '@/components/DS/input/input';
+import Github from '@/components/svg/github';
+import Linkedin from '@/components/svg/linkedin';
+import Twitter from '@/components/svg/twitter';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 
@@ -33,7 +36,9 @@ export default function FooterSection({ mainMenu }) {
                     component="a"
                     aria-label="linkedin lien"
                     href="https://www.linkedin.com/in/jean-gautier/">
-                    <i className="lni lni-linkedin"></i>
+                    <i>
+                      <Linkedin />
+                    </i>
                   </IconButton>
                 </li>
                 <li>
@@ -41,7 +46,9 @@ export default function FooterSection({ mainMenu }) {
                     component="a"
                     aria-label="twitter lien"
                     href="https://twitter.com/kalrious">
-                    <i className="lni lni-twitter"></i>
+                    <i>
+                      <Twitter />
+                    </i>
                   </IconButton>
                 </li>
                 <li>
@@ -49,7 +56,9 @@ export default function FooterSection({ mainMenu }) {
                     component="a"
                     aria-label="github lien"
                     href="https://github.com/KALrious">
-                    <i className="lni lni-github"></i>
+                    <i>
+                      <Github />
+                    </i>
                   </IconButton>
                 </li>
               </ul>
