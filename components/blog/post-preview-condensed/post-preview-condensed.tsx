@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { FC, HTMLAttributes } from 'react';
 import Button from '@/components/DS/button/button';
 
@@ -34,17 +34,15 @@ const PostPreviewCondensed: FC<Props & HTMLAttributes<HTMLDivElement>> = ({
         )}
         <div className="pt-8 pb-6 flex flex-col gap-2">
           <h5 className="package-name">
-            <Link href={`/blog/${slug}`}>
-              {title}
-            </Link>
+            <Link href={`/blog/${slug}`}>{title}</Link>
           </h5>
           <p>{excerpt}</p>
         </div>
       </div>
       <div className="flex justify-center">
         <Link href={`/blog/${slug}`} legacyBehavior>
-          <Button component="a" href={`/blog/${slug}`}>
-            Read More
+          <Button component="a" href={`/blog/${slug}`} className="whitespace-nowrap text-ellipsis overflow-hidden max-w-xs">
+            {title}
           </Button>
         </Link>
       </div>
